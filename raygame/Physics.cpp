@@ -28,3 +28,19 @@ void physObj::addForce(glm::vec2 force)
 {
 	forces += force * (1.0f / mass);
 }
+
+void physObj::addImpulse(glm::vec2 impulse)
+{
+	vel += impulse * (1.0f / mass);
+}
+
+void physObj::addAccel(glm::vec2 accel)
+{
+	forces += accel;
+}
+
+void physObj::addVelocityChange(glm::vec2 delta)
+{
+	vel += delta;
+
+}
